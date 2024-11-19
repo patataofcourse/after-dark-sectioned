@@ -6,19 +6,19 @@
         {{ super() }}
     {% endblock header %}
 
-    <header>
-        <h1 itemprop="headline">{{ section.title }}</h1>
-    </header>
-    <div itemprop="articleBody">
-      {{ section.content | safe }}
-    </div>
+<header>
+    <h1 itemprop="headline">{{ section.title }}</h1>
+</header>
+<div itemprop="articleBody">
+    {{ section.content | safe }}
+</div>
 
-    {% block page_footer %}
-        <footer>
-            <hr>
-            {% block extra_footer %}
-            {% endblock extra_footer %}
-        </footer>
-    {% endblock page_footer %}
+{% block page_footer %}
+    <footer>
+        <hr>
+        {% block extra_footer %}
+        {% endblock extra_footer %}
+    </footer>
+{% endblock page_footer %}
 
 {% endblock content %}
